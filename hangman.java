@@ -24,7 +24,6 @@ public class Hangman {
      System.out.println();
      String userName = name.nextLine();  
      System.out.println("Total Number of Lives: " + userLives);  
-     //this is a comment. This is the method
      for(Scanner input = new Scanner(System.in); 
         !word.matches("[" + guesses + "]+") & (misses += word.contains(guesses.substring(0, 1)) ? 0 : 1) <= userLives;
         guesses = input.nextLine().toUpperCase().charAt(0) + guesses){ 
