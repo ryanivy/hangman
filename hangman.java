@@ -27,7 +27,7 @@ public class Hangman {
      for(Scanner input = new Scanner(System.in); 
         !word.matches("[" + guesses + "]+") & (misses += word.contains(guesses.substring(0, 1)) ? 0 : 1) <= userLives;
         guesses = input.nextLine().toUpperCase().charAt(0) + guesses){ 
-        System.out.println("Your choices:" + guesses);
+        System.out.println("Your options:" + guesses);
         System.out.println(word.replaceAll("(?<=.)", " ").replaceAll("[^" + guesses + "]", "-") + ("(Lives Left: " + (userLives - misses) + ")"));
      }
        if(word.matches("[" + guesses + "]+")){
